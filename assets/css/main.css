@@ -11,3 +11,33 @@
   background-color: #fff;
   border-color: none;
 }
+
+.homepage{
+  background-image: url('../images/fondo.jpg');
+  display: flex;
+  background-position: center;
+  width: 100%;
+
+}
+
+.welcome{
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 2em;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  font-size: 16px;
+}
+
+.border1{
+  padding-right: 0em;
+}
+
+.border2{
+  padding-left: 0em;
+}
+.inputs{
+  background-color: grey;
+  padding: 2em;
+
+}
