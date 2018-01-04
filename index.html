@@ -16,27 +16,70 @@
         <div class="col-md-6 col-lg-6 border1">
           <div class="background">
             <div class="welcome">
-              <p>Bienvenido a StartApp. Una red social para emprendedores dónde podrás encontrar, compartir información para hacer crecer tu negocio. Y mostrar tus servicios o productos por supuesto.</p>
+              <img class="logo_index" src="assets/images/logo.png">
+                <p>Bienvenido a StartApp. Una red social para emprendedores dónde podrás encontrar, compartir información para hacer crecer tu negocio. Y mostrar tus servicios o productos por supuesto.
+                </p>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-6 border2">
           <div class="inputs">
-            <div class="input-group">
-              <span class="input-group-addon input_one" id="sizing-addon2"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+            <h2>Ingresar</h2>
+              <div class="input-group input_one">
+                <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                 <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
-            </div>
-            <div class="input-group">
-              <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-key" aria-hidden="true"></i></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-key" aria-hidden="true"></i></span>
                 <input type="text" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
-            </div>
+              </div>
+              <div class="login">
+                <button type="button" class="btn btn-primary btn-md btn1">Iniciar sesión</button>
+              </div>
+              <div>
+                <h5>O bien inicia sesión con...</h5>
+              </div>
+              <div class="icons">
+                <a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              </div>
+              <h5>O</h5>
+              <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group middle" role="group">
+                  <button type="button" class="btn btn-primary btn-md btn1" data-toggle="modal" data-target="#mimodal">Registrate</button>
+                </div>
+              </div>
+              <div class="modal fade" id="mimodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Abre una cuenta</h4>
+                    </div>
+                    <div class="modal-body">
+                      <input class="input_register" type="text" name="input" placeholder="Nombres">
+                      <input class="input_register" type="text" name="input" placeholder="Apellidos">
+                    </div>
+                    <div class="modal-body">
+                      <input class="input_register1" type="text" name="input" placeholder="Correo electrónico">
+                    </div>
+                    <div class="modal-body">
+                      <input class="input_register1" type="text" name="input" placeholder="Contraseña">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary btn_create">Crear cuenta</button>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
           </div>
         </div>
-      </div>
+       </div>
     </div>
   </section>
   <nav class="navbar navbar-default nav_bar">
-    <div class="container-fluid">
+    <div class="container">
       <div class="navbar-header header">
         <img class="logo" src="assets/images/logo.png">
       </div>
@@ -50,9 +93,9 @@
     </div>
   </nav>
   <section class="first">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-md-4 col-lg-4">
+        <div class="col-md-3 col-lg-3">
           <div class="btn-group-vertical" role="group" aria-label="...">
             <input type="text" class="form-control" placeholder="Buscar">
             <button type="button" class="btn btn-default">Invitar amigos</button>
@@ -61,7 +104,7 @@
               <span class="badge">4</span></button>
           </div>
         </div>
-        <div class="col-md-4 col-lg-4">
+        <div class="col-md-6 col-lg-6">
           <h1>Fondos Concursables</h1>
           <div class="thumbnail">
             <img src="assets/images/corfo.jpg" alt="...">
@@ -80,7 +123,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-lg-4">
+        <div class="col-md-3 col-lg-3">
           <div class="list-group">
             <a href="#" class="list-group-item active">
               <h4 class="list-group-item-heading">List group item heading</h4>
@@ -92,9 +135,12 @@
     </div>
   </section>
 
+  <script src="https://use.fontawesome.com/7873633050.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
 
-<script src="https://use.fontawesome.com/7873633050.js"></script>
+
 
 </body>
 </html>
