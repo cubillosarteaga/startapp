@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="assets/css/grid.css">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDEU_jVdKjoBNWIT1uiiO1wY4W_EU2vnNY",
+    authDomain: "startapp-5ea72.firebaseapp.com",
+    databaseURL: "https://startapp-5ea72.firebaseio.com",
+    projectId: "startapp-5ea72",
+    storageBucket: "startapp-5ea72.appspot.com",
+    messagingSenderId: "331023785710"
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
 <body>
   <section>
@@ -30,17 +42,18 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 border2">
           <div class="inputs">
+            <!--Login-->
             <h2>Ingresar</h2>
             <div class="input-group input_one">
               <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-              <input type="email" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+              <input id="emailLog" type="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon2">
             </div>
             <div class="input-group">
               <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-key" aria-hidden="true"></i></span>
-              <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
+              <input id="passwordLog" type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
             </div>
             <div class="login">
-              <button type="button" class="btn btn-primary btn-md btn1">Iniciar sesión</button>
+              <button onclick="login()" type="button" class="btn btn-primary btn-md btn1">Iniciar sesión</button>
             </div>
             <div>
               <h5>O bien inicia sesión con...</h5>
@@ -65,17 +78,17 @@
                     <h4 class="modal-title">Abre una cuenta</h4>
                   </div>
                   <div class="modal-body">
-                    <input class="input_register" type="text" name="input" placeholder="Nombres">
-                    <input class="input_register" type="text" name="input" placeholder="Apellidos">
+                    <input id="name" class="input_register" type="text" name="input" placeholder="Nombres">
+                    <input id="lastName" class="input_register" type="text" name="input" placeholder="Apellidos">
                   </div>
                   <div class="modal-body">
-                    <input class="input_register1" type="text" name="input" placeholder="Correo electrónico">
+                    <input id="email" class="input_register1" type="text" name="input" placeholder="Correo electrónico">
                   </div>
                   <div class="modal-body">
-                    <input class="input_register1" type="text" name="input" placeholder="Contraseña">
+                    <input id="password" class="input_register1" type="text" name="input" placeholder="Contraseña">
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn_create">Crear cuenta</button>
+                    <button onclick="registrar()" type="button" class="btn btn-primary btn_create">Crear cuenta</button>
                   </div>
                 </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
@@ -159,13 +172,15 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-6">
-          <!--Comment window
-          <div id="comment-box">
-            <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+          <!--Post window-->
+          <!--<div id="postForm">
+            <input class="form-control" id="postTitle" name="postTitle" placeholder="Título" rows="1"></input>
+            <input class="form-control" id="postTxt" name="postTxt" placeholder="Texto"></input>
+>>>>>>> Stashed changes
             <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
-          </div>
-          Secciones-->
-          <h1>Fondos Concursables</h1>
+          </div>-->
+          <!--Secciones-->
+          <h1>Newsfeed</h1>
           <div class="thumbnail">
             <img src="assets/images/corfo.jpg" alt="...">
             <div class="caption">
@@ -174,13 +189,14 @@
               <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal3">Ver más</a>
             </div>
           </div>
+          <!--Modal Ver más-->
           <div class="modal fade" id="mimodal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content modal_bg">
-              <div class="modal-header">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content modal_bg">
+                <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h3 class="modal-title">CORFO</h3>
-              </div>
+                </div>
               <div class="modal-body">
                 <img src="assets/images/captura.png" alt="">
               </div>
@@ -193,13 +209,16 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary btn_create">Guardar</button>
                 </div>
+              </div>
             </div>
           </div>
-        </div>
+          <!--.Fin Modal-->
+          <!--Comentarios-->
           <div id="comment-box">
             <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
             <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
           </div>
+          <!--Otra-->
           <div class="thumbnail">
             <img src="assets/images/foco_logo.png" alt="...">
             <div class="caption">
@@ -251,18 +270,8 @@
           <div class="col hidden-xs col hidden-sm col-md-3 col-lg-3">
           <!--Newsfeed-->
             <div class="feed">
-            <!--Aquí se generan los feed-->
-            <!--<div class="feedBox list-group">
-              <a href="#" class="list-group-item active">
-                <span>Usuario compartió:</span>
-                <h4 class="list-group-item-heading">List group item heading</h4>
-                <p class="list-group-item-text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                <span>Fecha</span>
-              </a>
-            </div>-->    
+             
             </div>
-          </div>
-        
       </div>
   </section>
   

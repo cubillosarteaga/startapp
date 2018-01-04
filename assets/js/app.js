@@ -6,46 +6,77 @@ $(document).ready(function(){
 });
 });
 
+function registrar() {
+  	
+  var name = $('#name').val();
+  var lastName = $('#lastName').val();
+  var email = $('#email').val();
+  var password = $('#password').val();
 
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  	// Handle Errors here.
+  	var errorCode = error.code;
+  	var errorMessage = error.message;
+  	// ...
+	});
+}
+
+function login() {
+  	
+	var emailLog = $('#emailLog').val();
+  var passwordLog = $('#passwordLog').val();
+
+  firebase.auth().signInWithEmailAndPassword(emailLog, passwordLog).catch(function(error) {
+  	// Handle Errors here.
+  	var errorCode = error.code;
+  	var errorMessage = error.message;
+  	// ...
+	});
+}
 
 $(document).ready(function() {
+	
+	// Postear y generar feed:
+	var idPost = 0;
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDEU_jVdKjoBNWIT1uiiO1wY4W_EU2vnNY",
-    authDomain: "startapp-5ea72.firebaseapp.com",
-    databaseURL: "https://startapp-5ea72.firebaseio.com",
-    projectId: "startapp-5ea72",
-    storageBucket: "startapp-5ea72.appspot.com",
-    messagingSenderId: "331023785710"
-  };
-  firebase.initializeApp(config);
-
-  
-  // Enviar comentario y generar feed:
-  $('#sendBtn').click(function() {
-    console.log("Entro")
-    var comment = $('#comment').val();
-    console.log(comment)
-    if(comment !== "") {
-      $('.feed').prepend(
-        "<div class='feedBox list-group'>" +
+	$('#sendBtn').click(function() {
+		if ($('#postTxt').val() !== "" && $('#postTitle').val() !== "") {
+			$('.feed').prepend(
+				"<div id='post_"+ idPost +"' class='post list-group'>" +
           "<a href='#' class='list-group-item active'>" +
             "<span>Usuario " + fullDate + "</span>" +
-            "<h4 class='list-group-item-heading'>List group item heading</h4>" +
-            "<p class='list-group-item-text'>" + comment + "</p>" +
+            "<h4 class='list-group-item-heading'>" + $('#postTitle').val() + "</h4>" +
+            "<p class='list-group-item-text'>" + $('#postTxt').val() + "</p>" +
           "</a>" +
-        "</div>"  
-      );
-    }
-  });
-      
-  // Da formato a la fecha:
-    var todayFeed = new Date();
-    var date = todayFeed.getDate();
-    var month = todayFeed.getMonth();
-    var year = todayFeed.getFullYear();
-    var hours = todayFeed.getHours();
-    var minutes = todayFeed.getMinutes();
-    var fullDate = date +'/'+ month +'/'+ year +' '+ hours +':'+ minutes;
+          "<div class='input-group'>" +
+      			"<input type='text' id='comment' class='form-control' placeholder='Comentar'>" +
+      			"<span class='input-group-btn'>" +
+        			"<button id='sendComment' class='btn btn-default' type='button'><span class='glyphicon glyphicon-send' aria-hidden='true'></span></button>" +
+      			"</span>" +
+    			"</div><!-- /input-group -->" +
+        "</div>"	
+			);
+		}
+	});
+
+	// Da formato a la fecha:
+		var todayFeed = new Date();
+		var date = todayFeed.getDate();
+		var month = todayFeed.getMonth();
+		var year = todayFeed.getFullYear();
+		var hours = todayFeed.getHours();
+		var minutes = todayFeed.getMinutes();
+		var fullDate = date +'/'+ month +'/'+ year +' '+ hours +':'+ minutes;
+
+	// Comentar posteo:
+	$('#sendComment').click(function() {
+		if ($('#comment').val() !== "") {
+				$('.feedBox').append(
+					"<div class='commentBox'>" +
+          	"<p>" + $('#comment').val() +
+          	"</p>" +
+        	"</div>"	
+				);
+			}
+	});
 });
