@@ -10,28 +10,34 @@
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 </head>
 <body>
-  <section class="homepage">
+  <section>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col hidden-md col hidden-lg" id="splash">
+        <img class="logo_splash" src="assets/images/logo.png">
+      </div>
+    </div>
+  </section>
+  <section class="homepage"
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-lg-6 border1">
+        <div class="col hidden-xs col hidden-sm col-md-6 col-lg-6 border1">
           <div class="background">
             <div class="welcome">
               <img class="logo_index" src="assets/images/logo.png">
-              <p>Bienvenido a StartApp. Una red social para emprendedores dónde podrás encontrar, compartir información para hacer crecer tu negocio. Y mostrar tus servicios o productos por supuesto.
-              </p>
+              <p>Bienvenido a StartApp. Una red social para emprendedores dónde podrás encontrar, compartir información para hacer crecer tu negocio. Y mostrar tus servicios o productos por supuesto.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-6 border2">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 border2">
           <div class="inputs">
             <h2>Ingresar</h2>
             <div class="input-group input_one">
               <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+              <input type="email" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
             </div>
             <div class="input-group">
               <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-key" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
+              <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
             </div>
             <div class="login">
               <button type="button" class="btn btn-primary btn-md btn1">Iniciar sesión</button>
@@ -79,61 +85,172 @@
       </div>
     </div>
   </section>
-  <nav class="navbar navbar-default nav_bar">
-    <div class="container">
-      <div class="navbar-header header">
-        <img class="logo" src="assets/images/logo.png">
-      </div>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="User Name">
-          <input type="text" class="form-control" placeholder="Password">
+  <section>
+    <nav class="navbar navbar-default nav_bar">
+      <div class="container">
+        <div class="row">
+          <div class="col hidden-xs col hidden-sm col-md-12 col-lg-12">
+            <div class="navbar-header header">
+              <img class="logo" src="assets/images/logo.png">
+            </div>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <i class="fa fa-user-circle" aria-hidden="true"></i> <a class="nav_header">Perfil</a>
+                <i class="fa fa-globe" aria-hidden="true"></i> <a class="nav_header">Inicio</a>
+              </div>
+              <button type="submit" class="btn btn-default">Cerrar sesión</button>
+            </form>
+          </div>
         </div>
-        <button type="submit" class="btn btn-default">Ingresar</button>
-      </form>
-    </div>
-  </nav>
+      </div>
+    </nav>
+  </section>
   <section class="first">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 col-lg-3">
-          <!--Menú lateral-->
+        <div class="col-xs-12 col-sm-12 col hidden-md col hidden-lg icons_mobile">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal2"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+          <i class="fa fa-envelope-square" aria-hidden="true"></i>
+          <i class="fa fa-calendar-o" aria-hidden="true"></i>
+          <i class="fa fa-money" aria-hidden="true"></i>
+          <i class="fa fa-rocket" aria-hidden="true"></i>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        </div>
+        <!--Menú lateral-->
+        <div class="col hidden-xs col hidden-sm col-md-3 col-lg-3">
           <div class="btn-group-vertical" role="group" aria-label="...">
-            <input type="text" class="form-control" placeholder="Buscar">
-            <button type="button" class="btn btn-default">Invitar amigos</button>
-            <button type="button" class="btn btn-default">Publicar</button>
-            <button class="btn btn-default" type="button">Mensajes Privados 
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <button type="button" class="btn btn-default"><i class="fa fa-users" aria-hidden="true"></i> Invitar amigos</button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal2"><i class="fa fa-pencil-square" aria-hidden="true"></i> Publicar</button>
+            <button class="btn btn-default" type="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Mensajes Privados 
               <span class="badge">4</span></button>
+              <button type="button" class="btn btn-default"><i class="fa fa-calendar-o" aria-hidden="true"></i> Eventos</button>
+              <button type="button" class="btn btn-default"><i class="fa fa-money" aria-hidden="true"></i> Financiamiento</button>
+              <button type="button" class="btn btn-default"><i class="fa fa-rocket" aria-hidden="true"></i> Capacitación</button>
+              <button type="button" class="btn btn-default"><i class="fa fa-shopping-basket" aria-hidden="true"></i> MarketPlace</button>
+          </div>
+        </div>
+        <div class="modal fade" id="mimodal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content modal_bg">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Publicar</h3>
+              </div>
+              <div class="modal-body">
+                <textarea class="txt" id="modal-comment" placeholder="Añade un comentario..."></textarea>
+              </div>
+              <hr>
+              <div class="modal-body">
+                <a class="icons2" href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Foto/Video</a>
+                <a class="icons2" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Ubicación</a>
+                <a class="icons2" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Etiquetar un evento</a>
+                <a class="icons2" href="#"><i class="fa fa-users" aria-hidden="true"></i> Etiquetar a un amigo/a</a>
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn_create">Publicar</button>
+                </div>
+            </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-6">
-          <!--Comment window-->
+          <!--Comment window
           <div id="comment-box">
-            <textarea id="comment" name="comment" placeholder="Comentario" rows="1"></textarea>
+            <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
             <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
           </div>
-          <!--Secciones-->
+          Secciones-->
           <h1>Fondos Concursables</h1>
           <div class="thumbnail">
             <img src="assets/images/corfo.jpg" alt="...">
             <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a href="#" class="btn btn-primary" role="button">Button</a>
+              <h3>CORFO</h3>
+              <p>¿Qué hacemos?Apoyamos a empresas, para que a través del cofinanciamiento de proyectos, mejoren sus prácticas de gestión, sus procesos productivos y su oferta; e implementen acciones de carácter asociativo y encadenamientos productivos, mejorando así su productividad y facilitando su internacionalización.</p>
+              <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal3">Ver más</a>
             </div>
           </div>
-          <div class="thumbnail">
-            <img src="assets/images/corfo.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a href="#" class="btn btn-primary" role="button">Button</a>
+          <div class="modal fade" id="mimodal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content modal_bg">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">CORFO</h3>
+              </div>
+              <div class="modal-body">
+                <img src="assets/images/captura.png" alt="">
+              </div>
+              <div class="modal-body favorites">
+                <a><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
+                <a><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
+                <a><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
+              </div>
+              <hr>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn_create">Guardar</button>
+                </div>
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-lg-3">
+          <div id="comment-box">
+            <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+            <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
+          </div>
+          <div class="thumbnail">
+            <img src="assets/images/foco_logo.png" alt="...">
+            <div class="caption">
+              <h3>FOCO</h3>
+              <p>Es una organización cuyo objetivo es reunir y difundir todos los fondos concursables disponibles y compartirlos en comunidad. Nuestro espíritu es crear una comunidad que apoye el desarrollo de las ideas compartiendo el conocimiento para hacerlas realidad.</p>
+              <a href="#" class="btn btn-primary btn_caption" role="button">Ver más</a>
+            </div>
+          </div>
+          <div id="comment-box">
+            <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+            <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
+          </div>
+          <h1>Eventos</h1>
+        <div class="thumbnail">
+            <img src="assets/images/evento.png" id="img_modal" class="img-fluid" alt="Responsive image">
+            <div class="caption">
+              <h3>17° Friday Beer Meeting</h3>
+              <p>5 de enero de 2018, Temuco, Chile. kowork</p>
+              <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal4">Ver más</a>
+            </div>
+          </div>
+          <div id="comment-box">
+            <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+            <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
+          </div>
+        </div>
+         <div class="modal fade" id="mimodal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content modal_bg">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Evento</h3>
+              </div>
+              <div class="modal-body">
+                <img src="assets/images/evento1.png" alt="">
+              </div>
+              <div class="modal-body favorites">
+                <a><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
+                <a><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
+                <a><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
+              </div>
+              <hr>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn_create">Guardar</button>
+                </div>
+            </div>
+          </div>
+          </div>
+          <div class="col hidden-xs col hidden-sm col-md-3 col-lg-3">
           <!--Newsfeed-->
-          <div class="feed">
+            <div class="feed">
             <!--Aquí se generan los feed-->
             <!--<div class="feedBox list-group">
               <a href="#" class="list-group-item active">
@@ -143,10 +260,10 @@
                 <span>Fecha</span>
               </a>
             </div>-->    
+            </div>
           </div>
-        </div>
+        
       </div>
-    </div>
   </section>
   
   <script src="https://use.fontawesome.com/7873633050.js"></script>

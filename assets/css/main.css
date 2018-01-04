@@ -1,118 +1,194 @@
-.logo {
-	width: 20%;
-	padding-top: 8px;
+.logo{
+  width: 279%;
+  padding-top: 0.5em;
 }
 
-.logo_index {
-	width: 70%;
-	padding-left: 6em;
-	padding-bottom: 2em;
-	padding-top: 2em;
+.logo_index{
+  width: 70%;
+  padding-left: 6em;
+  padding-bottom: 2em;
+  padding-top: 2em;
 }
 
-.header {
-	width: 805px;
+.nav_bar{
+  background-color: #fff;
+  border-color: none;
 }
 
-.nav_bar {
-	background-color: #fff;
-	border-color: none;
+.homepage{
+  background-image: url('../images/fondo.jpg');
+  display: flex;
+  box-sizing: border-box;
+  background-position: center;
+  width: 100%;
 }
 
-.homepage {
-	background-image: url('../images/fondo.jpg');
-	display: flex;
-	background-position: center;
+.welcome{
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 2em;
+  padding-top: 1.1em;
+  padding-bottom: 7.6em;
+  font-size: 18px;
+}
+
+.border1{
+  padding-right: 0em;
+  padding-left: 2em;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.border2{
+  padding-left: 1em;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.inputs{
+  background-color: rgb(59, 172, 143);
+  padding: 2em;
+  color: white;
+  text-align: center;
+
+}
+
+.input_one{
+  margin-bottom: 2em;
+}
+
+h2, h5{
+  text-align: center;
+}
+
+.icons{
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color:rgb(90, 90, 90);
+}
+
+.middle{
+  padding-left: 8em;
+  padding-right: 8em;
+}
+
+.btn1{
+  background-color: rgb(242, 242, 242);
+  border: none;
+  color: grey;
+}
+
+.btn1:hover{
+  background-color: rgb(190, 135, 193);
+
+}
+
+.login{
+  padding-top: 1em;
+}
+/*
+.input_register{
+  padding-right: 7em;
+}
+
+.input_register1{
+  padding-right: 26.6em;
+}
+*/
+.btn_create, #sendBtn{
+  background-color: rgb(59, 172, 143);
+  color: #fff;
+}
+
+.icons2{
+  background-color: rgb(190, 135, 193);
+  border-radius: 0.3em;
+  color: #fff;
+  font-size: 14px;
+  padding: 0.4em;
+}
+
+.btn_create:hover{
+  background-color: rgb(190, 135, 193);
+  color: #fff;
+}
+
+h3{
+  color: black;
+}
+
+.nav_header{
+  color: rgb(90, 90, 90);
+  cursor: pointer;
+}
+
+.modal_bg{
+  background-color: rgb(242, 242, 242);
+}
+
+textarea {
+  width: 100%;
+  height: 4em;
+  color: #4E4D53;
+  font-size: 15px;
+  padding: 1em;
+  border: none;
+  margin: 0 auto;
+  background-color: rgb(242, 242, 242); 
+}
+
+.icons_mobile{
+  font-size: 20px;
+  letter-spacing: 0.4em;
+}
+
+#splash{
+  /*position:absolute;*/
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 100vh;
+  background-color: #2B2B2B;
+}
+
+.logo_splash{
+  width: 80%;
+  padding-top: 10em;
+  padding-left: 7em;
+}
+
+#comment-box{
+	padding-bottom: 1em;
+}
+
+.btn_caption{
+	background-color: rgb(190, 135, 193);
+}
+
+.btn_caption:hover{
+	background-color: rgb(242, 242, 242); 
+	cursor: pointer;
+	border: none;
+}
+
+.favorites a{
+	color: rgb(90, 90, 90);
+
+}
+
+img{
 	width: 100%;
 }
 
-.welcome {
-	background-color: rgba(0,0,0,0.8);
-	color: white;
-	padding: 2em;
-	padding-top: 1.1em;
-	padding-bottom: 7.6em;
-	font-size: 18px;
-}
-
-.border1 {
-	padding-right: 0em;
-	padding-left: 9em;
-	padding-top: 6em;
-	padding-bottom: 6em;
-}
-
-.border2 {
-	padding-left: 0em;
-	padding-right: 9em;
-	padding-top: 6em;
-	padding-bottom: 6em;
-}
-.inputs {
-	background-color: rgb(59, 172, 143);
-	padding: 2em;
-	color: white;
-
-}
-
-.input_one {
-	margin-bottom: 2em;
-}
-
-h2, h5 {
-	text-align: center;
-}
-
-.icons {
-	text-align: center;
-	font-size: 20px;
-	cursor: pointer;
-	color: white;
-}
-
-a {
-	color: white;
-}
-
-a:hover {
-	color:rgb(90, 90, 90);
-}
-
-.middle {
-	padding-left: 8em;
-	padding-right: 8em;
-}
-
-.btn1 {
-	background-color: rgb(242, 242, 242);
-	border: none;
-	color: grey;
-}
-
-.btn1:hover {
-	background-color: rgb(190, 135, 193);
-
-}
-
-.login {
-	padding-left: 14em;
-	padding-top: 1em;
-}
-
-.input_register {
-	padding-right: 7em;
-}
-
-.input_register1 {
-	padding-right: 26.6em;
-}
-
-.btn_create {
-	background-color: rgb(59, 172, 143);
-	color: #fff;
-}
-
-.btn_create:hover {
-	background-color: rgb(190, 135, 193);
-	color: #fff;
+.header{
+	width: 4em;
 }
