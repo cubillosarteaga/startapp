@@ -134,7 +134,7 @@ h3{
   background-color: rgb(242, 242, 242);
 }
 
-textarea {
+textarea, #postTitle {
   width: 100%;
   height: 4em;
   color: #4E4D53;
@@ -229,6 +229,6 @@ img{
   background-color: rgb(59, 172, 143);
   text-align: left;
   color: rgb(242, 242, 242);
-  position: absolute;
-  top: 117em;
+  position: fixed;
+  bottom: 0vh;
 }
