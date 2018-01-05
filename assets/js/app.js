@@ -34,9 +34,9 @@ function watcher() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in:
-      $('.homepage').hide();
+     /* $('.homepage').hide();
       $('#header').show();
-      $('#first').show();
+      $('#first').show();*/
       console.log(user);
       var displayName = user.displayName;
       var email = user.email;
@@ -48,9 +48,9 @@ function watcher() {
       // ...
     } else {
       // User is signed out:
-      $('.homepage').show();
+      /*$('.homepage').show();
       $('#header').hide();
-      $('#first').hide();  
+      $('#first').hide();  */
       // ...
     }
   });

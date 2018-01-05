@@ -147,7 +147,7 @@ textarea {
 
 .icons_mobile{
   font-size: 20px;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
 }
 
 #splash{
@@ -196,3 +196,20 @@ img{
 .modal-dialog{
   color: #2B2B2B;
 }
+
+.friend1{
+  width: 12%;
+  margin-left: 0.6em;
+}
+
+.friend2{
+  width: 8%;
+}
+/*
+.fa-bars{
+  font-size: 27px; 
+  padding-top: 0.4em;
+  padding-left: 4em;
+}
+*/
+

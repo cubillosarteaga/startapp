@@ -65,10 +65,8 @@
               <a><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             </div>
             <h5>O</h5>
-            <div class="btn-group btn-group-justified" role="group" aria-label="...">
-              <div class="btn-group middle" role="group">
-                <button type="button" class="btn btn-primary btn-md btn1" data-toggle="modal" data-target="#mimodal">Regístrate</button>
-              </div>
+            <div>
+              <button type="button" class="btn btn-primary btn-md btn1" data-toggle="modal" data-target="#mimodal">Regístrate</button>
             </div>
             <!--Modal Registro-->
             <div class="modal fade" id="mimodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -115,6 +113,14 @@
               <button type="submit" class="btn btn-default">Cerrar sesión</button>
             </form>
           </div>
+          <div class="col-xs-6 col-sm-6 col hidden-md col hidden-lg">
+            <div class="navbar-header header">
+              <img class="logo" src="assets/images/logo.png">
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col hidden-md col hidden-lg">
+            <i class="fa fa-bars" aria-hidden="true" style="font-size: 27px; padding-top: 0.4em; padding-left: 4em;"></i>
+          </div>
         </div>
       </div>
     </nav>
@@ -124,7 +130,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col hidden-md col hidden-lg icons_mobile">
           <i class="fa fa-search" aria-hidden="true"></i>
-          <i class="fa fa-users" aria-hidden="true"></i>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal5"><i class="fa fa-users" aria-hidden="true"></i></button>
           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal2"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
           <i class="fa fa-envelope-square" aria-hidden="true"></i>
           <i class="fa fa-calendar-o" aria-hidden="true"></i>
@@ -139,14 +145,41 @@
               <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon2">
                 <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
             </div>
-            <button type="button" class="btn btn-default"><i class="fa fa-users" aria-hidden="true"></i> Invitar amigos</button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal5"><i class="fa fa-users" aria-hidden="true"></i> Amigos</button>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal2"><i class="fa fa-pencil-square" aria-hidden="true"></i> Publicar</button>
             <button class="btn btn-default" type="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Mensajes Privados 
-              <span class="badge">4</span></button>
-              <button type="button" class="btn btn-default"><i class="fa fa-calendar-o" aria-hidden="true"></i> Eventos</button>
-              <button type="button" class="btn btn-default"><i class="fa fa-money" aria-hidden="true"></i> Financiamiento</button>
-              <button type="button" class="btn btn-default"><i class="fa fa-rocket" aria-hidden="true"></i> Capacitación</button>
-              <button type="button" class="btn btn-default"><i class="fa fa-shopping-basket" aria-hidden="true"></i> MarketPlace</button>
+            <button type="button" class="btn btn-default"><i class="fa fa-calendar-o" aria-hidden="true"></i> Eventos</button>
+            <button type="button" class="btn btn-default"><i class="fa fa-money" aria-hidden="true"></i> Financiamiento</button>
+            <button type="button" class="btn btn-default"><i class="fa fa-rocket" aria-hidden="true"></i> Capacitación</button>
+            <button type="button" class="btn btn-default"><i class="fa fa-shopping-basket" aria-hidden="true"></i> MarketPlace</button>
+          </div>
+        </div>
+        <div class="modal fade" id="mimodal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content modal_bg">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Mis amigos</h3>
+              </div>
+              <div class="modal-body">
+                <img src="assets/images/amigo1.png" alt="..." class="img-circle friend1">
+                <img src="assets/images/amigo2.png" alt="..." class="img-circle friend1">
+                <img src="assets/images/amigo3.png" alt="..." class="img-circle friend1">
+                <img src="assets/images/amigo1.png" alt="..." class="img-circle friend1">
+                <img src="assets/images/amigo2.png" alt="..." class="img-circle friend1">
+                <img src="assets/images/amigo3.png" alt="..." class="img-circle friend1">
+              </div>
+              <hr>
+              <div class="modal-body">
+                <h6>Sugerencias</h6>
+                <img src="assets/images/amigo4.png" alt="..." class="img-circle friend2">
+                <a class="icons2" href="#"><i class="fa fa-plus" aria-hidden="true"></i> Seguir</a>
+                <a class="icons2" href="#"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</a>
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn_create">Invitar a un amigo/a</button>
+                </div>
+            </div>
           </div>
         </div>
         <div class="modal fade" id="mimodal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -255,9 +288,9 @@
                 <img src="assets/images/evento1.png" alt="">
               </div>
               <div class="modal-body favorites">
-                <a><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
-                <a><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
-                <a><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
+                <a class="icons2" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
+                <a class="icons2" href="#"><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
+                <a class="icons2" href="#"><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
               </div>
               <hr>
               <div class="modal-footer">
