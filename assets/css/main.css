@@ -175,7 +175,7 @@ textarea {
 }
 
 .btn_caption:hover{
-	background-color: rgb(242, 242, 242); 
+	background-color: rgb(242, 242, 242);
 	cursor: pointer;
 	border: none;
 }
@@ -212,4 +212,23 @@ img{
   padding-left: 4em;
 }
 */
+.commentTxt{
+  background-color: rgb(216, 184, 218);
+  color: rgb(105, 105, 105);
+}
 
+.txt_promo{
+  color: #2B2B2B;
+  padding-bottom: 1em;
+}
+
+.btn_chat{
+  width: 100%;
+  padding: 0.4em;
+  border: 0em;
+  background-color: rgb(59, 172, 143);
+  text-align: left;
+  color: rgb(242, 242, 242);
+  position: absolute;
+  top: 117em;
+}
