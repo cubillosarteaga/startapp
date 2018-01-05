@@ -1,12 +1,5 @@
-$(document).ready(function(){
-  $(function(){
-   setTimeout(function() {
-      $('#splash').fadeOut(700);
-   }, 3000);
-});
-});
-
-function registrar() {
+// Registro de usuario:
+function register() {
   	
   var name = $('#name').val();
   var lastName = $('#lastName').val();
@@ -21,6 +14,7 @@ function registrar() {
 	});
 }
 
+// Inicio de sesión:
 function login() {
   	
 	var emailLog = $('#emailLog').val();
@@ -34,7 +28,43 @@ function login() {
 	});
 }
 
+// Observador de estado:
+function watcher() {
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in:
+      $('.homepage').hide();
+      $('#header').show();
+      $('#first').show();
+      console.log(user);
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out:
+      $('.homepage').show();
+      $('#header').hide();
+      $('#first').hide();  
+      // ...
+    }
+  });
+}
+watcher();
+
 $(document).ready(function() {
+
+  // Splash screen versión móvil:
+  $(function() {
+    setTimeout(function() {
+      $('#splash').fadeOut(700);
+    }, 3000);
+  });
 	
 	// Postear y generar feed:
 	var idPost = 0;
