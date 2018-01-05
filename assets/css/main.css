@@ -28,7 +28,7 @@
   color: white;
   padding: 2em;
   padding-top: 1.1em;
-  padding-bottom: 7.6em;
+  padding-bottom: 8em;
   font-size: 18px;
 }
 
@@ -179,16 +179,20 @@ textarea {
 	cursor: pointer;
 	border: none;
 }
-
+/*
 .favorites a{
 	color: rgb(90, 90, 90);
 
 }
-
+*/
 img{
 	width: 100%;
 }
 
 .header{
 	width: 4em;
+}
+
+.modal-dialog{
+  color: #2B2B2B;
 }
