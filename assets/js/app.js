@@ -86,31 +86,57 @@ $(document).ready(function() {
     var minutes = todayFeed.getMinutes();
     var fullDate = date +'/'+ month +'/'+ year +' '+ hours +':'+ minutes;
 
-	// Comentar posteo:
-	$('#sendBtn').click(function() {
-		if ($('#comment').val() !== "" && $('#postTitle').val() !== "") {
-			$('.feed').prepend(
-				"<div class='post list-group'>" +
-          "<a href='#' class='list-group-item active'>" +
-            "<span>Usuario " + fullDate + "</span>" +
-            "<h4 class='list-group-item-heading'>" + $('#postTitle').val() + "</h4>" +
-            "<p class='list-group-item-text'>" + $('#postTxt').val() + "</p>" +
-          "</a>" +
-          "<div class='input-group'>" +
-      			"<input type='text' id='comment' class='form-control' placeholder='Comentar'>" +
-      			"<span class='input-group-btn'>" +
-        			"<button id='sendComment' class='btn btn-default' type='button'><span class='glyphicon glyphicon-send' aria-hidden='true'></span></button>" +
-      			"</span>" +
-    			"</div><!-- /input-group -->" +
-        "</div>"	
+	// Publicar posteo:
+	/*$('#submitBtn').click(function() {
+		if ($('#postTitle').val() !== "" && $('#postTxt').val() !== "") {
+			$('#feed').append(
+				"<div class='thumbnail'>" +
+          "<img src='" + imgURL + "' alt='...'>" +
+          "<div class='caption'>" +
+            "<h3>" + $('#postTitle').val() + "</h3>" +
+            "<p>" + $('#postTxt').val() + "</p>" +
+            "<a href='#' class='btn btn-primary btn_caption' role='button' data-toggle='modal' data-target='#mimodal3'>Ver más</a>" +
+          "</div>" +
+        "</div>" +
+        "<!--Modal 'Ver Más'-->" +
+        "<div class='modal fade' id='mimodal3' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>" +
+          "<div class='modal-dialog' role='document'>" +
+            "<div class='modal-content modal_bg'>" +
+              "<div class='modal-header'>" +
+                "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" +
+                "<h3 class='modal-title'>" + $('#postTitle').val() + "</h3>" +
+              "</div>" +
+              "<div class='modal-body'>" +
+                "<img src='" + imgURL + "' alt=''>" +
+              "</div>" +
+              "<div class='modal-body favorites'>" +
+                "<a class='icons2' href='#'><i class='fa fa-thumbs-up' aria-hidden='true'> Me gusta</i></a>" +
+                "<a class='icons2' href='#'><i class='fa fa-heart' aria-hidden='true'> Me encanta</i></a>" +
+                "<a class='icons2' href='#'><i class='fa fa-star' aria-hidden='true'> Favoritos</i></a>" +
+              "</div>" +
+              "<hr>" +
+              "<div class='modal-footer'>" +
+                "<button type='button' class='btn btn-primary btn_create'>Guardar</button>" +
+              "</div>" +
+            "</div>" +
+          "</div>" +
+        "</div>" +
+        "<!--Fin Modal 'Ver Más'-->" +
+        "<!--Comentarios-->" +
+        "<div id='commentBox'>" +
+          "<textarea id='comment' name='comentario' placeholder='Comentario' rows='1'></textarea>" +
+          "<button class='btn btn-default' id='sendBtn' type='submit' name='enviar'>Comentar</button>" +
+        "</div>" +
+        "<div id='commentList'>" +
+        "</div>"
 			);
 		}
-	});
+	});*/
 
 	// Comentar posteo:
 	$('#sendBtn').click(function() {
 		if ($('#comment').val() !== "") {
-				$('#commentBox').append(
+				$('#commentList').append(
 					"<div class='commentTxt'>" +
           	"<p>" + 
               "<span>Usuario " + fullDate + " </span>" + $('#comment').val() +

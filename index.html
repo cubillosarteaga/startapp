@@ -128,6 +128,7 @@
   <section id="first" class="first">
     <div class="container">
       <div class="row">
+        <!--Menú Mobile-->
         <div class="col-xs-12 col-sm-12 col hidden-md col hidden-lg icons_mobile">
           <i class="fa fa-search" aria-hidden="true"></i>
           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal5"><i class="fa fa-users" aria-hidden="true"></i></button>
@@ -143,192 +144,195 @@
           <div class="btn-group-vertical" role="group" aria-label="...">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon2">
-                <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
+              <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
             </div>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal5"><i class="fa fa-users" aria-hidden="true"></i> Amigos</button>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal2"><i class="fa fa-pencil-square" aria-hidden="true"></i> Publicar</button>
-            <button class="btn btn-default" type="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Mensajes Privados 
+            <button class="btn btn-default" type="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Mensajes Privados</button>
             <button type="button" class="btn btn-default"><i class="fa fa-calendar-o" aria-hidden="true"></i> Eventos</button>
             <button type="button" class="btn btn-default"><i class="fa fa-money" aria-hidden="true"></i> Financiamiento</button>
             <button type="button" class="btn btn-default"><i class="fa fa-rocket" aria-hidden="true"></i> Capacitación</button>
             <button type="button" class="btn btn-default"><i class="fa fa-shopping-basket" aria-hidden="true"></i> MarketPlace</button>
-          </div>
+          </div>  
         </div>
         <!-- Modal "Mis amigos" -->
         <div class="modal fade" id="mimodal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content modal_bg">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="modal-title">Mis amigos</h3>
-              </div>
-              <div class="modal-body">
-                <img src="assets/images/amigo1.png" alt="..." class="img-circle friend1">
-                <img src="assets/images/amigo2.png" alt="..." class="img-circle friend1">
-                <img src="assets/images/amigo3.png" alt="..." class="img-circle friend1">
-                <img src="assets/images/amigo1.png" alt="..." class="img-circle friend1">
-                <img src="assets/images/amigo2.png" alt="..." class="img-circle friend1">
-                <img src="assets/images/amigo3.png" alt="..." class="img-circle friend1">
-              </div>
-              <hr>
-              <div class="modal-body">
-                <h6>Sugerencias</h6>
-                <img src="assets/images/amigo4.png" alt="..." class="img-circle friend2">
-                <a class="icons2" href="#"><i class="fa fa-plus" aria-hidden="true"></i> Seguir</a>
-                <a class="icons2" href="#"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</a>
-              </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary btn_create">Invitar a un amigo/a</button>
-                </div>
-            </div>
-          </div>
-        </div>
-        <!-- Fin Modal "Mis amigos" -->
-        <!-- Modal "Publicar" -->
-        <div class="modal fade" id="mimodal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content modal_bg">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="modal-title">Publicar</h3>
-              </div>
-              <div class="modal-body">
-                <textarea class="txt" id="modal-comment" placeholder="Añade un comentario..."></textarea>
-              </div>
-              <hr>
-              <div class="modal-body">
-                <a class="icons2" href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Foto/Video</a>
-                <a class="icons2" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Ubicación</a>
-                <a class="icons2" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Etiquetar un evento</a>
-                <a class="icons2" href="#"><i class="fa fa-users" aria-hidden="true"></i> Etiquetar a un amigo/a</a>
-              </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary btn_create">Publicar</button>
-                </div>
-            </div>
-          </div>
-        </div>
-        <!-- Fin Modal "Publicar" -->
-        <div class="col-md-6 col-lg-6">
-        <!--Post window-->
-          <!--<div id="postForm">
-            <input class="form-control" id="postTitle" name="postTitle" placeholder="Título" rows="1"></input>
-            <input class="form-control" id="postTxt" name="postTxt" placeholder="Texto"></input>
-            <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
-          </div>-->
-          <!--Sección Newsfeed-->
-          <h1>Newsfeed</h1>
-          <!--Post-->
-          <div class="thumbnail">
-            <img src="assets/images/corfo.jpg" alt="...">
-            <div class="caption">
-              <h3>CORFO</h3>
-              <p>¿Qué hacemos?Apoyamos a empresas, para que a través del cofinanciamiento de proyectos, mejoren sus prácticas de gestión, sus procesos productivos y su oferta; e implementen acciones de carácter asociativo y encadenamientos productivos, mejorando así su productividad y facilitando su internacionalización.</p>
-              <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal3">Ver más</a>
-            </div>
-          </div>
-          <!--Modal "Ver Más"-->
-          <div class="modal fade" id="mimodal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content modal_bg">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title">CORFO</h3>
+                  <h3 class="modal-title">Mis amigos</h3>
                 </div>
                 <div class="modal-body">
-                  <img src="assets/images/captura.png" alt="">
-                </div>
-                <div class="modal-body favorites">
-                  <a class="icons2" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
-                  <a class="icons2" href="#"><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
-                  <a class="icons2" href="#"><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
+                  <img src="assets/images/amigo1.png" alt="..." class="img-circle friend1">
+                  <img src="assets/images/amigo2.png" alt="..." class="img-circle friend1">
+                  <img src="assets/images/amigo3.png" alt="..." class="img-circle friend1">
+                  <img src="assets/images/amigo1.png" alt="..." class="img-circle friend1">
+                  <img src="assets/images/amigo2.png" alt="..." class="img-circle friend1">
+                  <img src="assets/images/amigo3.png" alt="..." class="img-circle friend1">
                 </div>
                 <hr>
+                <div class="modal-body">
+                  <h6>Sugerencias</h6>
+                  <img src="assets/images/amigo4.png" alt="..." class="img-circle friend2">
+                  <a class="icons2" href="#"><i class="fa fa-plus" aria-hidden="true"></i> Seguir</a>
+                  <a class="icons2" href="#"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</a>
+                </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary btn_create">Guardar</button>
+                  <button type="button" class="btn btn-primary btn_create">Invitar a un amigo/a</button>
                 </div>
               </div>
             </div>
-          </div>
-          <!--Fin Modal "Ver Más"-->
-          <!--Comentarios-->
-          <div id="commentBox">
-            <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
-            <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
-            <!-- Lista de comentarios-->
-
-          </div>
-          <!--Otra-->
-          <div class="thumbnail">
-            <img src="assets/images/foco_logo.png" alt="...">
-            <div class="caption">
-              <h3>FOCO</h3>
-              <p>Es una organización cuyo objetivo es reunir y difundir todos los fondos concursables disponibles y compartirlos en comunidad. Nuestro espíritu es crear una comunidad que apoye el desarrollo de las ideas compartiendo el conocimiento para hacerlas realidad.</p>
-              <a href="#" class="btn btn-primary btn_caption" role="button">Ver más</a>
-            </div>
-          </div>
-          <div id="comment-box">
-            <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
-            <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
-          </div>
-          <div class="thumbnail">
-            <img src="assets/images/evento.png" id="img_modal" class="img-fluid" alt="Responsive image">
-              <div class="caption">
-                <h3>17° Friday Beer Meeting</h3>
-                <p>5 de enero de 2018, Temuco, Chile. kowork</p>
-                <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal4">Ver más</a>
+        </div> <!-- Fin Modal "Mis amigos" -->
+        <!-- Modal "Publicar" -->
+        <div class="modal fade" id="mimodal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content modal_bg">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title">Publicar</h3>
+                </div>
+                <div class="modal-body">
+                  <input id="postTitle" type="text" placeholder="Añade un título a tu publicación">
+                  <textarea class="txt" id="postTxt" placeholder="Añade un comentario..."></textarea>
+                </div>
+                <hr>
+                <div class="modal-body">
+                  <a class="icons2" href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Foto/Video</a>
+                  <a class="icons2" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Ubicación</a>
+                  <a class="icons2" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Etiquetar un evento</a>
+                  <a class="icons2" href="#"><i class="fa fa-users" aria-hidden="true"></i> Etiquetar a un amigo/a</a>
+                </div>
+                <div class="modal-footer">
+                  <button id="submitBtn" type="button" class="btn btn-primary btn_create">Publicar</button>
+                </div>
               </div>
             </div>
+        </div> <!-- Fin Modal "Publicar" -->
+        <!--Sección Newsfeed-->
+        <div class="col-md-6 col-lg-6">
+          <h1>Newsfeed</h1>
+          <div id="feed">
+            <!--Post-->
+            <div class="thumbnail">
+              <img src="assets/images/corfo.jpg" alt="...">
+              <div class="caption">
+                <h3>CORFO</h3>
+                <p>¿Qué hacemos?Apoyamos a empresas, para que a través del cofinanciamiento de proyectos, mejoren sus prácticas de gestión, sus procesos productivos y su oferta; e implementen acciones de carácter asociativo y encadenamientos productivos, mejorando así su productividad y facilitando su internacionalización.</p>
+                <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal3">Ver más</a>
+              </div>
+            </div>
+            <!--Modal "Ver Más"-->
+            <div class="modal fade" id="mimodal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content modal_bg">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">CORFO</h3>
+                  </div>
+                  <div class="modal-body">
+                    <img src="assets/images/captura.png" alt="">
+                  </div>
+                  <div class="modal-body favorites">
+                    <a class="icons2" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
+                    <a class="icons2" href="#"><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
+                    <a class="icons2" href="#"><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
+                  </div>
+                  <hr>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn_create">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div> <!--Fin Modal "Ver Más"-->
+            <!--Comentarios-->
+            <div id="commentBox">
+              <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+              <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
+            </div>
+            <div id="commentList">
+              
+            </div>
+            <!--Post-->
+            <div class="thumbnail">
+              <img src="assets/images/foco_logo.png" alt="...">
+              <div class="caption">
+                <h3>FOCO</h3>
+                <p>Es una organización cuyo objetivo es reunir y difundir todos los fondos concursables disponibles y compartirlos en comunidad. Nuestro espíritu es crear una comunidad que apoye el desarrollo de las ideas compartiendo el conocimiento para hacerlas realidad.</p>
+                <a href="#" class="btn btn-primary btn_caption" role="button">Ver más</a>
+              </div>
+            </div>
+            <!--Comentarios-->
             <div id="comment-box">
               <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
               <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
             </div>
-          </div>
-          <!-- Modal -->
-          <div class="modal fade" id="mimodal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content modal_bg">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title">Evento</h3>
+            <div id="commentList">
+              
+            </div>
+            <!--Post-->
+            <div class="thumbnail">
+              <img src="assets/images/evento.png" id="img_modal" class="img-fluid" alt="Responsive image">
+                <div class="caption">
+                  <h3>17° Friday Beer Meeting</h3>
+                  <p>5 de enero de 2018, Temuco, Chile. kowork</p>
+                  <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal4">Ver más</a>
                 </div>
-                <div class="modal-body">
-                  <img src="assets/images/evento1.png" alt="">
-                </div>
-                <div class="modal-body favorites">
-                  <a class="icons2" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
-                  <a class="icons2" href="#"><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
-                  <a class="icons2" href="#"><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
-                </div>
-                <hr>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary btn_create">Guardar</button>
-                  </div>
+              </div>
+              <div id="comment-box">
+                <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+                <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
               </div>
             </div>
+            <!-- Modal -->
+            <div class="modal fade" id="mimodal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content modal_bg">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">Evento</h3>
+                  </div>
+                  <div class="modal-body">
+                    <img src="assets/images/evento1.png" alt="">
+                  </div>
+                  <div class="modal-body favorites">
+                    <a class="icons2" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"> Me gusta</i></a>
+                    <a class="icons2" href="#"><i class="fa fa-heart" aria-hidden="true"> Me encanta</i></a>
+                    <a class="icons2" href="#"><i class="fa fa-star" aria-hidden="true"> Favoritos</i></a>
+                  </div>
+                  <hr>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn_create">Guardar</button>
+                    </div>
+                </div>
+              </div>
+            </div> <!--Fin Modal "Ver Más"-->
           </div>
-          <div class="col hidden-xs col hidden-sm col-md-3 col-lg-3">
-            <!--Publicidad y Chat-->
-            <div class="promo">
-              <a href="#" class="thumbnail">
-                <img src="assets/images/public1.png" alt="...">
-                <a href="#" class="txt_promo">Descubre más sobre este emprendimiento de lacteos</a>
-              </a>
-              <a href="#" class="thumbnail">
-                <img src="assets/images/public2.jpg" alt="...">
-                <a href="#" class="txt_promo">Hermosas creaciones en cuerina</a>
-              </a>
-              <a href="#" class="thumbnail">
-                <img src="assets/images/public3.png" alt="...">
-                <a href="#" class="txt_promo">¿Quieres despegar y acelerar...</a>
-              </a>
-            </div>
-            <div class="chat">
-              <button class="btn_chat"><i class="fa fa-comments" aria-hidden="true"></i> Chat</button>
-            </div>
+        </div>  
+        </div>  
+        <div class="col hidden-xs col hidden-sm col-md-3 col-lg-3">
+          <!--Publicidad-->
+          <div class="promo">
+            <a href="#" class="thumbnail">
+              <img src="assets/images/public1.png" alt="...">
+              <a href="#" class="txt_promo">Descubre más sobre este emprendimiento de lacteos</a>
+            </a>
+            <a href="#" class="thumbnail">
+              <img src="assets/images/public2.jpg" alt="...">
+              <a href="#" class="txt_promo">Hermosas creaciones en cuerina</a>
+            </a>
+            <a href="#" class="thumbnail">
+              <img src="assets/images/public3.png" alt="...">
+              <a href="#" class="txt_promo">¿Quieres despegar y acelerar...</a>
+            </a>
           </div>
+          <!--Chat-->
+          <div class="chat">
+            <button class="btn_chat"><i class="fa fa-comments" aria-hidden="true"></i> Chat</button>
+          </div>
+        </div>
       </div>
-    </div>    
+    </div>
   </section>
   <!-- Scripts-->
   <script src="https://use.fontawesome.com/7873633050.js"></script>
