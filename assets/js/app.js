@@ -28,6 +28,17 @@ function login() {
 	});
 }
 
+// Cierre de sesión:
+function close() {
+  firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+  console.log('Cierre de sesión exitoso.');
+  }).catch(function(error) {
+  // An error happened.
+  console.log('Ocurrió un error! Vuelve a intentarlo!');
+  });
+}
+
 // Observador de estado:
 function watcher() {
 
@@ -66,13 +77,20 @@ $(document).ready(function() {
     }, 3000);
   });
 	
-	// Postear y generar feed:
-	var idPost = 0;
+  // Da formato a la fecha:
+    var todayFeed = new Date();
+    var date = todayFeed.getDate();
+    var month = todayFeed.getMonth();
+    var year = todayFeed.getFullYear();
+    var hours = todayFeed.getHours();
+    var minutes = todayFeed.getMinutes();
+    var fullDate = date +'/'+ month +'/'+ year +' '+ hours +':'+ minutes;
 
+	// Comentar posteo:
 	$('#sendBtn').click(function() {
-		if ($('#postTxt').val() !== "" && $('#postTitle').val() !== "") {
+		if ($('#comment').val() !== "" && $('#postTitle').val() !== "") {
 			$('.feed').prepend(
-				"<div id='post_"+ idPost +"' class='post list-group'>" +
+				"<div class='post list-group'>" +
           "<a href='#' class='list-group-item active'>" +
             "<span>Usuario " + fullDate + "</span>" +
             "<h4 class='list-group-item-heading'>" + $('#postTitle').val() + "</h4>" +
@@ -89,21 +107,13 @@ $(document).ready(function() {
 		}
 	});
 
-	// Da formato a la fecha:
-		var todayFeed = new Date();
-		var date = todayFeed.getDate();
-		var month = todayFeed.getMonth();
-		var year = todayFeed.getFullYear();
-		var hours = todayFeed.getHours();
-		var minutes = todayFeed.getMinutes();
-		var fullDate = date +'/'+ month +'/'+ year +' '+ hours +':'+ minutes;
-
 	// Comentar posteo:
-	$('#sendComment').click(function() {
+	$('#sendBtn').click(function() {
 		if ($('#comment').val() !== "") {
-				$('.feedBox').append(
-					"<div class='commentBox'>" +
-          	"<p>" + $('#comment').val() +
+				$('#commentBox').append(
+					"<div class='commentTxt'>" +
+          	"<p>" + 
+              "<span>Usuario " + fullDate + " </span>" + $('#comment').val() +
           	"</p>" +
         	"</div>"	
 				);
