@@ -110,7 +110,7 @@
                 <i class="fa fa-user-circle" aria-hidden="true"></i> <a class="nav_header">Perfil</a>
                 <i class="fa fa-globe" aria-hidden="true"></i> <a class="nav_header">Inicio</a>
               </div>
-              <button onclick="close()" type="button" class="btn btn-default">Cerrar sesión</button>
+              <button onclick="close()" type="submit" class="btn btn-default">Cerrar sesión</button>
             </form>
           </div>
           <div class="col-xs-6 col-sm-6 col hidden-md col hidden-lg">
@@ -143,15 +143,15 @@
         <div class="col hidden-xs col hidden-sm col-md-3 col-lg-3">
           <div class="btn-group-vertical" role="group" aria-label="...">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon2">
+              <input id="keyword" type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon2">
               <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
             </div>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal5"><i class="fa fa-users" aria-hidden="true"></i> Amigos</button>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mimodal2"><i class="fa fa-pencil-square" aria-hidden="true"></i> Publicar</button>
             <button class="btn btn-default" type="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Mensajes Privados</button>
-            <button type="button" class="btn btn-default"><i class="fa fa-calendar-o" aria-hidden="true"></i> Eventos</button>
-            <button type="button" class="btn btn-default"><i class="fa fa-money" aria-hidden="true"></i> Financiamiento</button>
-            <button type="button" class="btn btn-default"><i class="fa fa-rocket" aria-hidden="true"></i> Capacitación</button>
+            <button id="eventos" type="button" class="btn btn-default"><i class="fa fa-calendar-o" aria-hidden="true"></i> Eventos</button>
+            <button id="financiamiento" type="button" class="btn btn-default"><i class="fa fa-money" aria-hidden="true"></i> Financiamiento</button>
+            <button id="capacitacion" type="button" class="btn btn-default"><i class="fa fa-rocket" aria-hidden="true"></i> Capacitación</button>
             <button type="button" class="btn btn-default"><i class="fa fa-shopping-basket" aria-hidden="true"></i> MarketPlace</button>
           </div>  
         </div>
@@ -214,12 +214,20 @@
           <h1>Newsfeed</h1>
           <div id="feed">
             <!--Post-->
-            <div class="thumbnail">
+            <div class="thumbnail financiamiento">
               <img src="assets/images/corfo.jpg" alt="...">
               <div class="caption">
                 <h3>CORFO</h3>
                 <p>¿Qué hacemos?Apoyamos a empresas, para que a través del cofinanciamiento de proyectos, mejoren sus prácticas de gestión, sus procesos productivos y su oferta; e implementen acciones de carácter asociativo y encadenamientos productivos, mejorando así su productividad y facilitando su internacionalización.</p>
                 <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal3">Ver más</a>
+              </div>
+              <!--Comentarios-->
+              <div id="commentBox">
+                <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+                <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
+              </div>
+              <div id="commentList">
+              
               </div>
             </div>
             <!--Modal "Ver Más"-->
@@ -245,43 +253,35 @@
                 </div>
               </div>
             </div> <!--Fin Modal "Ver Más"-->
-            <!--Comentarios-->
-            <div id="commentBox">
-              <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
-              <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
-            </div>
-            <div id="commentList">
-              
-            </div>
             <!--Post-->
-            <div class="thumbnail">
+            <div class="thumbnail financiamiento">
               <img src="assets/images/foco_logo.png" alt="...">
               <div class="caption">
                 <h3>FOCO</h3>
                 <p>Es una organización cuyo objetivo es reunir y difundir todos los fondos concursables disponibles y compartirlos en comunidad. Nuestro espíritu es crear una comunidad que apoye el desarrollo de las ideas compartiendo el conocimiento para hacerlas realidad.</p>
                 <a href="#" class="btn btn-primary btn_caption" role="button">Ver más</a>
               </div>
-            </div>
-            <!--Comentarios-->
-            <div id="comment-box">
+              <!--Comentarios-->
+              <div id="comment-box">
               <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
               <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
-            </div>
-            <div id="commentList">
+              </div>
+              <div id="commentList">
               
+              </div>
             </div>
             <!--Post-->
-            <div class="thumbnail">
+            <div class="thumbnail eventos">
               <img src="assets/images/evento.png" id="img_modal" class="img-fluid" alt="Responsive image">
               <div class="caption">
                   <h3>17° Friday Beer Meeting</h3>
                   <p>5 de enero de 2018, Temuco, Chile. kowork</p>
                   <a href="#" class="btn btn-primary btn_caption" role="button" data-toggle="modal" data-target="#mimodal4">Ver más</a>
               </div>
-            </div>
-            <div id="comment-box">
-              <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
-              <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
+              <div id="comment-box">
+                <textarea id="comment" name="comentario" placeholder="Comentario" rows="1"></textarea>
+                <button class="btn btn-default" id="sendBtn" type="submit" name="enviar">Comentar</button>
+              </div>
             </div>
             <!-- Modal -->
             <div class="modal fade" id="mimodal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

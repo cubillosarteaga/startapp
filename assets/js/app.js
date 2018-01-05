@@ -1,12 +1,13 @@
 // Registro de usuario:
 function register() {
   	
-  var name = $('#name').val();
+  var name = $('#name').val();          //Rescatando los datos ingresados por el usuario en el formulario
   var lastName = $('#lastName').val();
   var email = $('#email').val();
   var password = $('#password').val();
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password) //Pasamos los datos del usuario, según los parámetros requeridos (email, password)
+  .catch(function(error) {    //Incluimos instrucciones a ejecutar en caso de error
   	// Handle Errors here.
   	var errorCode = error.code;
   	var errorMessage = error.message;
@@ -17,26 +18,16 @@ function register() {
 // Inicio de sesión:
 function login() {
   	
-	var emailLog = $('#emailLog').val();
+	var emailLog = $('#emailLog').val();   //Rescatando los datos ingresados por el usuario en el formulario
   var passwordLog = $('#passwordLog').val();
 
-  firebase.auth().signInWithEmailAndPassword(emailLog, passwordLog).catch(function(error) {
+  firebase.auth().signInWithEmailAndPassword(emailLog, passwordLog) //Pasamos los datos del usuario, según los parámetros requeridos (email, password)
+  .catch(function(error) {  //Incluimos instrucciones a ejecutar en caso de error
   	// Handle Errors here.
   	var errorCode = error.code;
   	var errorMessage = error.message;
   	// ...
 	});
-}
-
-// Cierre de sesión:
-function close() {
-  firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-  console.log('Cierre de sesión exitoso.');
-  }).catch(function(error) {
-  // An error happened.
-  console.log('Ocurrió un error! Vuelve a intentarlo!');
-  });
 }
 
 // Observador de estado:
@@ -48,6 +39,7 @@ function watcher() {
       $('.homepage').hide();
       $('#header').show();
       $('#first').show();
+      console.log('Usuario activo');
       console.log(user);
       var displayName = user.displayName;
       var email = user.email;
@@ -62,11 +54,25 @@ function watcher() {
       $('.homepage').show();
       $('#header').hide();
       $('#first').hide();
+      console.log('No hay usuario activo');
       // ...
     }
   });
 }
 watcher();
+
+// Cierre de sesión:
+function close() {
+  firebase.auth().signOut()
+  // Sign-out successful.
+  .then(function() {
+    console.log('Cierre de sesión exitoso.');
+  })
+  // An error happened.
+  .catch(function(error) {
+    console.log('Ocurrió un error! Vuelve a intentarlo!');
+  })
+}
 
 $(document).ready(function() {
 
@@ -145,4 +151,21 @@ $(document).ready(function() {
 				);
 			}
 	});
+
+  // Botones Filtrar newsfeed:
+  $('#eventos').click(function() {
+    $('.financiamiento').toggle();
+    $('.capacitacion').toggle();
+  });
+
+  $('#financiamiento').click(function() {
+    $('.eventos').toggle();
+    $('.capacitacion').toggle();
+  });
+
+  $('#capacitacion').click(function() {
+    $('.eventos').toggle();
+    $('.financiamiento').toggle();
+  });
+
 });
