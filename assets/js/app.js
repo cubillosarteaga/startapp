@@ -145,7 +145,7 @@ $(document).ready(function() {
 				$('#commentList').append(
 					"<div class='commentTxt'>" +
           	"<p>" + 
-              "<span>Usuario " + fullDate + " </span>" + $('#comment').val() +
+              "<span>Makarena  " + fullDate + " </span>" + $('#comment').val() +
           	"</p>" +
         	"</div>"	
 				);
